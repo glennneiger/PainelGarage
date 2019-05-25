@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Routa from './main/Routas'
+import { BrowserRouter } from "react-router-dom";
+import Menu from './modulos/Menu'
+import Topo from './modulos/Topo'
+
+// import Login from './paginas/login'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            {/* <Login /> */}
+            <div className="d-flex">
+                <Menu />
+                <div className="content">
+                    <Topo />
+                    <Routa />
+                </div>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
