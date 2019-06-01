@@ -1,16 +1,5 @@
 import styled from 'styled-components'
 
-export const OficinaMain = styled.main`
-    margin: 20px;
-    border-radius: 3px;
-    height: auto;
-    .botoesTop {
-        padding: 30px;  
-        display: flex;
-        justify-content: space-between;
-    }
-`
-
 export const Oficinas = styled.section`
     width: 95%;
     margin: auto;

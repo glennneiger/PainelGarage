@@ -2,6 +2,125 @@
     --color-primary: #FF530D;
     --color-primary-light: #FF9468;
     --color-cinza: #EFEFEF;
+    --color-cinza-dark: rgb(175, 175, 175);
+    --color-vermelho: #f44336;
+    --color-azul: #2979ff;
+    --color-verde: #00a152;
 }
 .d-flex { display: flex; width: 100%; }
 .content { width: 100%; }
+.btnVerde {
+    border: 0;
+    border-radius: 3px;
+    width: 150px;
+    height: 50px;
+    background-color: var(--color-verde);
+    color: white;
+    font-weight: bold;
+}
+.btnAzul {
+    border: 0;
+    border-radius: 3px;
+    width: 130px;
+    height: 30px;
+    background-color: var(--color-azul);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px var(--color-cinza-dark);
+}
+.btnVermelho {
+    border: 0;
+    border-radius: 3px;
+    width: 130px;
+    height: 30px;
+    background-color: var(--color-vermelho);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px var(--color-cinza-dark);
+}
+input[type=text], textarea {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 0px 0px 2px gray;
+    margin: 5px;
+}
+input[type=submit] {
+    border: 0;
+    border-radius: 3px;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: var(--color-primary-light);
+    margin: 5px;
+}
+textarea {
+    height: 80px;
+}
+.form-inline {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.form-group {
+    width: 100%;
+}
+.statusAprovacao {
+    width: 120px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    border-radius: 3px;
+    background-color: var(--color-verde);
+    box-shadow: 0px 5px 5px var(--color-cinza);
+
+}
+.statusPendente{
+    width: 120px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    border-radius: 3px;
+    background-color: var(--color-primary);
+    box-shadow: 0px 5px 5px var(--color-cinza);
+}
+.btnPagamento {
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    height: 30px;
+    background-color: var(--color-verde);
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    box-shadow: 0px 2px 5px var(--color-cinza-dark);
+}
+
+.btnBig { height: 50px; }
+
+.mr-1 { margin-right: 10px !important; }
+.mr-2 { margin-right: 20px !important; }
+.mr-3 { margin-right: 30px !important; }
+.mr-4 { margin-right: 40px !important; }
+.mr-5 { margin-right: 50px !important; }
+
+.ml-1 { margin-left: 10px !important; }
+.ml-2 { margin-left: 20px !important; }
+.ml-3 { margin-left: 30px !important; }
+.ml-4 { margin-left: 40px !important; }
+.ml-5 { margin-left: 50px !important; }
+
+.mt-1 { margin-top: 10px !important; }
+.mt-2 { margin-top: 20px !important; }
+.mt-3 { margin-top: 30px !important; }
+.mt-4 { margin-top: 40px !important; }
+.mt-5 { margin-top: 50px !important; }
+
+.mb-1 { margin-bottom: 10px !important; }
+.mb-2 { margin-bottom: 20px !important; }
+.mb-3 { margin-bottom: 30px !important; }
+.mb-4 { margin-bottom: 40px !important; }
+.mb-5 { margin-bottom: 50px !important; }

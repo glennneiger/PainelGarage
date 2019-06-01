@@ -9,7 +9,7 @@ import styled from 'styled-components'
     margin-left: auto; 
     margin-right: auto; 
     z-index: 999999;
-    height: 600px;
+    height: 400px;
     background-color: var(--color-cinza);
     .linha-laranja {
         width: 100%;
@@ -17,6 +17,11 @@ import styled from 'styled-components'
         background-color: var(--color-primary);
         border-radius: 3px 3px 0px 0px;
     }
+    .form-group { margin: 30px 0; }
+    input {margin: 0;}
+    input[type=submit] { color: white; }
+    form {padding: 40px;}
+    .formL { display: flex; align-items: center; justify-content: space-between; }
 `
 
 export const LoginMain = styled.main`

@@ -6,7 +6,7 @@ export default function Itens() {
   return (
     <Nav>
         <ul>
-            <a href="/cadastro-oficina">
+            <a href="/oficina">
                 <li> 
                     <img src={IconOficina} alt="icon" width="30px" height="30px" />
                     <p>Cadastrar uma oficina </p> 
@@ -16,6 +16,12 @@ export default function Itens() {
                 <li> 
                     <img src={IconProduto} alt="icon" width="30px" height="30px" />
                     <p>Cadastrar um Produto </p> 
+                </li>
+            </a>
+            <a href="/oficinas-aprovar">
+                <li> 
+                    <img src={IconProduto} alt="icon" width="30px" height="30px" />
+                    <p>Oficinas para aprovar</p> 
                 </li>
             </a>
         </ul>

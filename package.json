@@ -7,9 +7,17 @@
     "pagarme": "^4.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-input-mask": "^2.0.4",
+    "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
+    "react-select": "^2.4.3",
+    "react-simple-timefield": "^2.0.3",
+    "redux": "^4.0.1",
+    "redux-multi": "^0.1.12",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^4.2.0"
   },
   "scripts": {

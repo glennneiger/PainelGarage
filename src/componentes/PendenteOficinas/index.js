@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-import { OficinaMain, Oficinas } from './styled-oficina'
-import Api from '../../main/server/api'
+import { Oficinas} from './styled-oficina'
+import { connect } from 'react-redux'
 import {LinkImage} from '../../main/server/links'
 
-import { connect } from 'react-redux'
+import Api from '../../main/server/api'
 
-class Oficina extends Component {
+class PendenteOficina extends Component {
     state = {
         previewOficina: null
     }
-    async componentDidMount () {
-        this.getOficina();
+    componentDidMount() {
+        this.getOficinas()
     }
 
-    getOficina = async () => {
-        const resp = await Api.get(`oficinausuario/${this.props.dados.dadosUser.id}/APROVADO`)
+    getOficinas = async () => {
+        const resp = await Api.get(`oficinausuario/${this.props.dados.dadosUser.id}/PENDENTE`)
         this.setState({ ...this.state, previewOficina: resp.data })
     }
 
@@ -34,13 +34,13 @@ class Oficina extends Component {
                         <p> <strong> Descrição: </strong>{   oficina.Descricao.substr(0, 50)} </p>
                         <p> <strong> CNPJ: </strong> {oficina.cnpj} </p>
                         <p> <strong> Telefone: </strong> {oficina.telefone} </p>
-                        <div className="statusAprovacao"> 
-                            <p> APROVADO </p>
+                        <div className="statusPendente"> 
+                            <p> PENDENTE </p>
                         </div>
                     </div>
                     {/* Informações da oficina */}
                     <div className="botoes"> 
-                        <a href={`/create-oficina/${oficina.id}`} > <button className="btnAzul"> Editar </button>  </a>
+                    <a href={`/create-oficina/${oficina.id}`} > <button className="btnAzul"> Editar </button> </a>
                         <button className="btnVermelho" onClick={ () => this.removeOficina(oficina.id) }> Remover </button>
                     </div>
                 </div>
@@ -51,21 +51,15 @@ class Oficina extends Component {
 
     render() {
         let oficinas = (this.state.previewOficina) ? this.previewOficinas() : null;
-        return (
-            <OficinaMain>
-                <h2> Oficinas </h2>
-                <div className="botoesTop">
-                    <a href="/create-oficina/0" > <button className="btnVerde">  Adicionar Oficina </button> </a>
-                    <a href="/oficinas-pendentes"> <button className="btnVermelho btnBig"> Oficina Pendentes </button> </a>
-                </div>
-                <hr />
-                <Oficinas>
-                    {oficinas}
-                </Oficinas>
 
-            </OficinaMain>
+        return (
+            <Oficinas>
+                {oficinas}
+                
+            </Oficinas>
         )
     }
 }
+
 const mapStateToProps = state => ({ dados: state.Autenticacao })
-export default connect(mapStateToProps, null)(Oficina)
+export default connect(mapStateToProps, null)(PendenteOficina)
