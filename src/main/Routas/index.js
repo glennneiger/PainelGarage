@@ -10,6 +10,8 @@ import CreateOficina from '../../componentes/CreateOficina'
 import OficinasPendentes from '../../componentes/PendenteOficinas'
 import AprovaOficina from '../../modulos/Admin/AprovaOficina'
 import OficinaDetalhes from '../../modulos/OficinaDetalhes'
+import Categoria from '../../modulos/Admin/Categoria'
+
 
 export default  () => {
     return (
@@ -22,6 +24,7 @@ export default  () => {
             <Route exact path="/oficinas-pendentes" component={OficinasPendentes } />
             <Route exact path="/oficinas-aprovar" component={AprovaOficina } />
             <Route exact path="/oficina-detalhes/:id" component={OficinaDetalhes } />
+            <Route exact path="/categoria" component={Categoria } />
         </Switch>
     )
 }

@@ -12,10 +12,10 @@ export default function Itens() {
                     <p>Cadastrar uma oficina </p> 
                 </li>
             </a>
-            <a href="/produto">
+            <a href="/categoria">
                 <li> 
                     <img src={IconProduto} alt="icon" width="30px" height="30px" />
-                    <p>Cadastrar um Produto </p> 
+                    <p>Categoria </p> 
                 </li>
             </a>
             <a href="/oficinas-aprovar">

@@ -70,6 +70,7 @@ class CreateOficina extends Component {
         let reader = new FileReader()
         reader.onload = (e) => {
             this.setState({
+                ...this.state,
                 imagem: e.target.result
             })
         }

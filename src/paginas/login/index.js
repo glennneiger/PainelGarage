@@ -94,7 +94,7 @@ class Login extends Component {
                         }
                         <div className="form-group">
                             <label> <strong> Senha: </strong> </label>
-                            <input type="text" className="" name="senha" value={this.state.senha} placeholder="Senha" onChange={this.onchange} />
+                            <input type="password" className="" name="senha" value={this.state.senha} placeholder="Senha" onChange={this.onchange} />
                         </div>
                         <div className="form-group formL">
                             <input type="submit" value={ (!this.state.cadastro) ? "Fazer Login" : "Fazer cadastro"} />
